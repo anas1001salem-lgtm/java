@@ -1,0 +1,40 @@
+package edu.zuj.oop.week1;
+
+import java.util.Scanner;
+
+public class Converter {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        double n = s.nextDouble();
+        System.out.println("--------------------------------");
+        System.out.println("1- Convert From CM to Inch");
+        System.out.println("2- Convert From Inch to CM");
+        System.out.println("3- Convert From M to Feet");
+        System.out.println("4- Convert From Feet to M");
+        System.out.println("5- Convert From Dnum to Hiktar");
+        System.out.println("6- Convert From Hiktar to Dnum");
+        System.out.println("7- Convert From Cels to Fenh");
+        System.out.println("8- Convert From Fenh to Cels");
+        System.out.println("9- Quit");
+        System.out.println("--------------------------------");
+        int ch = s.nextInt();
+        double  result = 0;
+        switch(ch){
+            case 1: result=n/2.54;break;
+            case 2: result=n*2.54;break;
+            case 3: result=n*3.28084;break;
+            case 4: result=n/3.28084;break;
+            case 5: result=n/10;break;
+            case 6: result=n*10;break;
+            case 7: result=(n*1.8)+32;break;
+            case 8: result=(n-32)/1.8;break;
+            case 9: System.out.println("Goodbye"); break;
+            default: System.out.println("Invalid input"); break;
+        }
+        if (ch <=8 && ch > 0){
+        System.out.print("The Result = "+result);
+        }
+    }
+    
+}
